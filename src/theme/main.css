@@ -13,3 +13,9 @@
   background-repeat: no-repeat;
   background-size: contain;
 }
+
+@media (min-width: 1440px) {
+  #root {
+    background-image: url('../../public/assets/images/bg-desktop.svg');
+  }
+}

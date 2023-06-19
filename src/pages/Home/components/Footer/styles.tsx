@@ -6,10 +6,15 @@ export const Container = styled.footer`
 	justify-content: center;
 	min-height: 10vh;
 	margin-top: 64px;
+
+	@media (min-width: ${(props) => props.theme.breakpoints.desktop}) {
+		justify-content: flex-end;
+		margin-right: 80px;
+	}
 `;
 
 export const Circle = styled.div`
-	border: 1px solid #fff;
+	border: 1px solid ${(props) => props.theme.colors.white};
 	width: 30px;
 	height: 30px;
 	display: flex;
@@ -17,6 +22,17 @@ export const Circle = styled.div`
 	justify-content: center;
 	align-items: center;
 	margin-right: 12px;
+
+	@media (min-width: ${(props) => props.theme.breakpoints.desktop}) {
+		&:hover {
+			cursor: pointer;
+			border-color: ${(props) => props.theme.colors.softMagenta};
+
+			& svg {
+				color: ${(props) => props.theme.colors.softMagenta};
+			}
+		}
+	}
 `;
 
 export const Icon = styled(FontAwesomeIcon)`
